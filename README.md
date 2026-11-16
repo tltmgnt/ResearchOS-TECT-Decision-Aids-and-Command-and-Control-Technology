@@ -4,7 +4,7 @@ Independent research workspace for reproducible scenario comparison, information
 
 ## Browser app
 
-Run `npm run build` with Node.js 22 or newer, then open `dist/index.html`. No install, server, network connection or API key is required. GitHub Actions also publishes the standalone app as the **decision-studio-node-22** artifact on each successful check: download and unzip it, then open index.html.
+Download [the ready-built app](app/index.html) using GitHub’s **Download raw file** control and open the saved HTML file. Or run `npm run build` with Node.js 22 or newer, then open `dist/index.html`. No install, server, network connection or API key is required. GitHub Actions also publishes the standalone app as the **decision-studio-node-22** artifact on each successful check: download and unzip it, then open index.html.
 
 The app supports editable preference weights and alternative intervals, missing-input handling, information-age and evidence flags, sensitivity rank ranges, review rationale, JSON import/export, CSV and Markdown reports, and browser-local study storage. Use the advanced JSON editor to add criteria, alternatives and information sources. Apply JSON before evaluating.
 
