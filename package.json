@@ -1,0 +1,15 @@
+{
+  "name": "researchos-tect-decision-aids",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Reproducible scenario comparison and human-review research workspace",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "demo": "node cli/main.mjs run examples/coordination-tabletop.json --output runs/demo"
+  }
+}
