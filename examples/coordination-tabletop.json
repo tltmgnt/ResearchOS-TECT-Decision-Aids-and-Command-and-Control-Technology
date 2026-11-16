@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "id": "coordination-tabletop-001",
+  "title": "Synthetic municipal service-desk coordination exercise",
+  "owner": "example-only",
+  "context": "Civil infrastructure service-desk outage tabletop; comparison of information-sharing workflows.",
+  "hypothesis": "Changing declared preferences can change workflow comparisons; stale information remains a separate review concern.",
+  "protocol_reference": "docs/MODEL.md; synthetic research fixture",
+  "differentiation": "No novel decision method or validated operational benefit is established. Related-work review and human-factors evaluation remain required.",
+  "data_kind": "synthetic",
+  "as_of_utc": "2026-11-16T18:00:00Z",
+  "minimum_confidence": 0.7,
+  "criteria": [
+    {
+      "id": "clarity",
+      "label": "Information clarity",
+      "weight": 0.5,
+      "direction": "benefit",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "latency",
+      "label": "Update latency (minutes)",
+      "weight": 0.3,
+      "direction": "cost",
+      "min": 0,
+      "max": 60
+    },
+    {
+      "id": "effort",
+      "label": "Coordinator effort (index)",
+      "weight": 0.2,
+      "direction": "cost",
+      "min": 0,
+      "max": 10
+    }
+  ],
+  "information": [
+    {
+      "id": "desk-status",
+      "description": "Synthetic service-desk status report",
+      "observed_at_utc": "2026-11-16T17:55:00Z",
+      "max_age_minutes": 15,
+      "confidence": 0.9,
+      "corroborated": true,
+      "evidence_ids": []
+    },
+    {
+      "id": "staffing-note",
+      "description": "Synthetic staffing note requiring confirmation",
+      "observed_at_utc": "2026-11-16T16:00:00Z",
+      "max_age_minutes": 30,
+      "confidence": 0.5,
+      "corroborated": false,
+      "evidence_ids": []
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "shared-board",
+      "label": "Shared status board workflow",
+      "values": {
+        "clarity": {
+          "low": 75,
+          "high": 85
+        },
+        "latency": {
+          "low": 10,
+          "high": 20
+        },
+        "effort": {
+          "low": 3,
+          "high": 5
+        }
+      },
+      "information_ids": [
+        "desk-status"
+      ]
+    },
+    {
+      "id": "scheduled-brief",
+      "label": "Scheduled briefing workflow",
+      "values": {
+        "clarity": {
+          "low": 65,
+          "high": 80
+        },
+        "latency": {
+          "low": 20,
+          "high": 30
+        },
+        "effort": {
+          "low": 2,
+          "high": 4
+        }
+      },
+      "information_ids": [
+        "desk-status",
+        "staffing-note"
+      ]
+    },
+    {
+      "id": "unreviewed",
+      "label": "Incomplete workflow concept",
+      "values": {
+        "clarity": null,
+        "latency": {
+          "low": 5,
+          "high": 15
+        },
+        "effort": {
+          "low": 4,
+          "high": 6
+        }
+      },
+      "information_ids": []
+    }
+  ],
+  "sensitivity_factors": [
+    0.5,
+    1,
+    1.5
+  ],
+  "review": {
+    "disposition": "pending",
+    "reviewer": "",
+    "rationale": ""
+  },
+  "evidence": []
+}
